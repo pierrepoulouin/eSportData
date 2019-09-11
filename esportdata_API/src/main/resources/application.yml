@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path:
+    jsp:
+      registered: false
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  profiles-active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/esportdata?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET
+    username: root
+    password: Pierrebing59
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+    open-in-view: false
+    properties:
+      hibernate:
+        ddl-auto: update
+        generate_statistics: false
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
