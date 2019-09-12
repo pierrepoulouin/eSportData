@@ -19,4 +19,9 @@ public class TournamentServiceImpl implements TournamentService {
   public List<TournamentViewDto> getAll() {
     return repo.getAllTournamentBy();
   }
+
+  @Override
+  public TournamentViewDto getById(Long id) {
+    return repo.getById(id);
+  }
 }

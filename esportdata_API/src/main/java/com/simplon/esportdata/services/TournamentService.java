@@ -8,4 +8,5 @@ import java.util.List;
 public interface TournamentService {
 
   List<TournamentViewDto> getAll();
+  TournamentViewDto getById(Long id);
 }
