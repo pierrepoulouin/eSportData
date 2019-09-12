@@ -1,29 +1,32 @@
-package com.simplon.esportdata.entities;
+package com.simplon.esportdata.dtos;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import org.hibernate.validator.constraints.UniqueElements;
+
+import javax.validation.constraints.Future;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
-@Entity
-@Table(name="t_tournament")
-public class Tournament extends AbstractEntity {
+public class TournamentDto {
 
-  @Column(nullable = false, length = 50, unique = true)
+  @NotBlank
+  @Size(min = 1, max = 50)
+  @UniqueElements
   private String tournamentName;
-  @Column(nullable = false)
+  @NotNull
+  @FutureOrPresent
   private LocalDate startingDate;
-  @Column(nullable = false)
+  @NotNull
+  @Future
   private LocalDate endingDate;
-  @Column(nullable = false)
+  @NotBlank
   private String game;
-  @Column(nullable = false)
+  @NotBlank
   private String organizer;
-  @Column
   private String city;
-  @Column
   private Double prizePool;
-  @Column
   private boolean online;
 
   public String getTournamentName() {
@@ -34,12 +37,12 @@ public class Tournament extends AbstractEntity {
     this.tournamentName = tournamentName;
   }
 
-  public LocalDate getStartDate() {
+  public LocalDate getStartingDate() {
     return startingDate;
   }
 
-  public void setStartDate(LocalDate startDate) {
-    this.startingDate = startDate;
+  public void setStartingDate(LocalDate startingDate) {
+    this.startingDate = startingDate;
   }
 
   public LocalDate getEndingDate() {
@@ -78,8 +81,8 @@ public class Tournament extends AbstractEntity {
     return prizePool;
   }
 
-  public void setPrizePool(Double prizepool) {
-    this.prizePool = prizepool;
+  public void setPrizePool(Double prizePool) {
+    this.prizePool = prizePool;
   }
 
   public boolean isOnline() {

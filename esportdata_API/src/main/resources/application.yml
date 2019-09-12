@@ -16,12 +16,12 @@ spring:
     password: Pierrebing59
   jpa:
     show-sql: true
-    generate-ddl: false
+    generate-ddl: true
     hibernate:
     open-in-view: false
     properties:
       hibernate:
-        ddl-auto: update
+        ddl-auto: create
         generate_statistics: false
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true

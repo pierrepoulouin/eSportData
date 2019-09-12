@@ -12,4 +12,5 @@ public interface TournamentRepository extends JpaRepository<Tournament, Long> {
 
   TournamentViewDto getById(Long id);
   List<TournamentViewDto> getAllTournamentBy();
+
 }
