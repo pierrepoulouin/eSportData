@@ -13,7 +13,6 @@ public class TournamentDto {
 
   @NotBlank
   @Size(min = 1, max = 50)
-  @UniqueElements
   private String tournamentName;
   @NotNull
   @FutureOrPresent

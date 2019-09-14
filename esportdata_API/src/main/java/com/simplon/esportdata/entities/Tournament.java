@@ -34,12 +34,12 @@ public class Tournament extends AbstractEntity {
     this.tournamentName = tournamentName;
   }
 
-  public LocalDate getStartDate() {
+  public LocalDate getStartingDate() {
     return startingDate;
   }
 
-  public void setStartDate(LocalDate startDate) {
-    this.startingDate = startDate;
+  public void setStartingDate(LocalDate startingDate) {
+    this.startingDate = startingDate;
   }
 
   public LocalDate getEndingDate() {
