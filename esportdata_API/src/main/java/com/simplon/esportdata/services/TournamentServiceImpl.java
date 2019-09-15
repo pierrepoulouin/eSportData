@@ -42,6 +42,11 @@ public class TournamentServiceImpl implements TournamentService, CategoryService
     }
 
     @Override
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+
+    @Override
     @Cacheable("categories")
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();

@@ -11,4 +11,5 @@ public interface TournamentService {
   List<TournamentViewDto> getAll();
   TournamentViewDto getById(Long id);
   void create(TournamentDto tournamentDto);
+  void delete(Long id);
 }
