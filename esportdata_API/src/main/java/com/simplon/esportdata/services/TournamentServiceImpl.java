@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TournamentServiceImpl implements TournamentService, CategoryService {
+public class TournamentServiceImpl extends AbstractService implements TournamentService, CategoryService {
 
     private final TournamentRepository repo;
     private final CategoryRepository categoryRepository;
@@ -48,7 +48,9 @@ public class TournamentServiceImpl implements TournamentService, CategoryService
 
     @Override
     public void update(Long id, TournamentDto tournamentDto) {
-        Tournament tournament =
+        Tournament tournament = findById(id, repo);
+        modelMapper.map(tournamentDto, tournament);
+        repo.save(tournament);
     }
 
     @Override
