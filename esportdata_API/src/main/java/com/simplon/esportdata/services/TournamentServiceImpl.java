@@ -47,6 +47,11 @@ public class TournamentServiceImpl implements TournamentService, CategoryService
     }
 
     @Override
+    public void update(Long id, TournamentDto tournamentDto) {
+        Tournament tournament =
+    }
+
+    @Override
     @Cacheable("categories")
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
