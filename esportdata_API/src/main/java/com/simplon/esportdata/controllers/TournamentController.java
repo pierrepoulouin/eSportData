@@ -38,4 +38,8 @@ public class TournamentController {
         service.delete(id);
     }
 
+    @PutMapping("/{id}")
+    protected void updateTournament(@PathVariable("id") Long id, @RequestBody @Valid TournamentDto tournamentDto) {
+        service.update(id, tournamentDto);
+    }
 }
