@@ -1,12 +1,10 @@
 package com.simplon.esportdata.entities;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Embeddable;
 
-@Entity
-@Table(name = "t_login")
-public class Login extends AbstractEntity {
+@Embeddable
+public class Login {
   @Column(nullable = false)
   private String username;
   @Column(nullable = false)
