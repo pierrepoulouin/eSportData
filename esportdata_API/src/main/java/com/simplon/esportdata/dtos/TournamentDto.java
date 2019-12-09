@@ -1,6 +1,5 @@
 package com.simplon.esportdata.dtos;
 
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.validation.constraints.Future;
 import javax.validation.constraints.FutureOrPresent;

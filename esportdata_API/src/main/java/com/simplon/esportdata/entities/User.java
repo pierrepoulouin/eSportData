@@ -1,7 +1,6 @@
 package com.simplon.esportdata.entities;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
@@ -18,9 +17,6 @@ public class User extends AbstractEntity {
 
   @Column(nullable = false)
   private LocalDate birthdate;
-
-  @Embedded
-  private Login login;
 
   public User() {
   }
@@ -49,11 +45,4 @@ public class User extends AbstractEntity {
     this.birthdate = birthdate;
   }
 
-  public Login getLogin() {
-    return login;
-  }
-
-  public void setLogin(Login login) {
-    this.login = login;
-  }
 }
