@@ -21,6 +21,7 @@ class Tournament extends React.Component {
       <form>
         <label>
           Nom du tournoi:
+
           <input type="text" value={this.state.tournamentName} />
         </label>
         <label>
