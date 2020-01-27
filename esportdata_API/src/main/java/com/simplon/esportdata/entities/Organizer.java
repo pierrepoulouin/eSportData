@@ -1,24 +1,32 @@
 package com.simplon.esportdata.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "t_user")
-public class User extends AbstractEntity {
+@Table(name = "t_organizer")
+public class Organizer extends AbstractEntity {
 
-  @Column(length = 100, nullable = false)
+  @Column(length = 25, nullable = false)
   private String firstname;
 
-  @Column(nullable = false)
+  @Column(length = 25, nullable = false)
   private String lastname;
 
   @Column(nullable = false)
   private LocalDate birthdate;
 
-  public User() {
+  @Column(nullable = false)
+  private String email;
+
+  @Column(length = 25, nullable = false)
+  private String pseudo;
+
+  public Organizer() {
   }
 
   public String getFirstname() {
@@ -45,4 +53,19 @@ public class User extends AbstractEntity {
     this.birthdate = birthdate;
   }
 
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getPseudo() {
+    return pseudo;
+  }
+
+  public void setPseudo(String pseudo) {
+    this.pseudo = pseudo;
+  }
 }
